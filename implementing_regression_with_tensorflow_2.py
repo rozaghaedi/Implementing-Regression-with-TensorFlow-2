@@ -58,3 +58,17 @@ plt.legend()
 plt.title('True Values vs Model Predictions')
 plt.show()
 
+
+import matplotlib.pyplot as plt
+# Plot the validation loss for model 1 from epoch 800 onwards
+plt.plot(hist_1.history['val_loss'][800:], label='Model 1 Validation Loss from Epoch 800')
+
+# Plot the validation loss for model 2 from epoch 800 onwards
+plt.plot(hist_2.history['val_loss'][800:], label='Model 2 Validation Loss from Epoch 800')
+
+# Adding labels and legend
+plt.xlabel('Epoch')
+plt.ylabel('Validation Loss')
+plt.legend()
+plt.title('Validation Loss for Model 1 and Model 2 from Epoch 800')
+plt.show()
